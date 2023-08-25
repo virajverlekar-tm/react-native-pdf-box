@@ -1,0 +1,20 @@
+{
+  "name": "react-native-pdf-box",
+  "title": "React Native PdfBox",
+  "version": "0.0.1",
+  "description": "A wrapper of PdfBox-Android library",
+  "types": "index.d.ts",
+  "main": "index.js",
+  "keywords": [
+    "react-native"
+  ],
+  "readmeFilename": "README.md",
+  "peerDependencies": {
+    "react": "18.1.0",
+    "react-native": "0.70.2"
+  },
+  "devDependencies": {
+    "react": "18.1.0",
+    "react-native": "0.70.2"
+  }
+}
