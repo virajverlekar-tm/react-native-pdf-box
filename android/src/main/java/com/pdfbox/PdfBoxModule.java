@@ -27,9 +27,9 @@ public class PdfBoxModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void unlockPdf(String filePath, String password) {
+    public void unlockPdf(String filePath, String password, Promise promise) {
         try {
-            // select a file for Decryption operation
+            // select the file for Decryption operation
             File file = new File(filePath);
       
             // Load the PDF file
@@ -43,8 +43,10 @@ public class PdfBoxModule extends ReactContextBaseJavaModule {
       
             // Close the PDF file
             pdd.close();
+
+            promise.resolve(true);
         } catch (IOException e) {
-            Log.e("PdfBox-React Native", "Exception thrown while creating PDF", e);
+            promise.reject(e);
         }
     }
 }
