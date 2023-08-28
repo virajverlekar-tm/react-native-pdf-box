@@ -7,6 +7,8 @@ import com.facebook.react.bridge.ReactMethod;
 
 import android.util.Log;
 import java.io.File;
+// import android.net.Uri;
+import androidx.core.content.FileProvider;
 import java.io.IOException;
 import com.tom_roush.pdfbox.pdmodel.PDDocument;
 
@@ -44,7 +46,8 @@ public class PdfBoxModule extends ReactContextBaseJavaModule {
             // Close the PDF file
             pdd.close();
 
-            promise.resolve(true);
+            // promise.resolve(Uri.fromFile(file).toString());
+            promise.resolve(FileProvider.getUriForFile(reactContext, reactContext.getPackageName() + ".provider", file).toString());
         } catch (IOException e) {
             promise.reject(e);
         }
