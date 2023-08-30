@@ -67,5 +67,5 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'  // From node_modules
-    implementation 'com.tom-roush:pdfbox-android:2.0.27.0'
+    implementation 'com.github.virajverlekar-tm:PdfBox-Android:develop'
 }
