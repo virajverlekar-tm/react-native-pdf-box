@@ -21,6 +21,10 @@ def safeExtGet(prop, fallback) {
 
 apply plugin: 'com.android.library'
 
+plugins {
+    id 'com.alexvasilkov.git-dependencies' version '2.0.4'
+}
+
 buildscript {
     // The Android Gradle plugin is only required when opening the android folder stand-alone.
     // This avoids unnecessary downloads and potential conflicts when the library is included as a
@@ -39,8 +43,6 @@ buildscript {
     }
 }
 
-apply plugin: 'com.android.library'
-
 android {
     compileSdkVersion safeExtGet('compileSdkVersion', DEFAULT_COMPILE_SDK_VERSION)
     buildToolsVersion safeExtGet('buildToolsVersion', DEFAULT_BUILD_TOOLS_VERSION)
@@ -53,10 +55,6 @@ android {
     lintOptions {
         abortOnError false
     }
-}
-
-plugins {
-    id 'com.alexvasilkov.git-dependencies' version '2.0.4'
 }
 
 git {
