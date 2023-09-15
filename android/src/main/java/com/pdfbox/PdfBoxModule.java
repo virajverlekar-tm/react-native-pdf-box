@@ -10,7 +10,7 @@ import java.io.File;
 // import android.net.Uri;
 import androidx.core.content.FileProvider;
 import java.io.IOException;
-import com.tom_roush.pdfbox.pdmodel.PDDocument;
+import com.turtlemint.pdf_box.PDDocument;
 
 import javax.annotation.Nonnull;
 
